@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace LibraryManagementSystem.Core.Dtos
+﻿namespace LibraryManagementSystem.Core.Dtos
 {
-    public class RoleDto:BaseDto
+    public class RoleDto : BaseDto
     {
     }
 }

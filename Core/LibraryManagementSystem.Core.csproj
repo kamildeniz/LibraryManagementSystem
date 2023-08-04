@@ -7,7 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ClassLibrary1\LibraryManagementSystem.Entity.csproj" />
     <ProjectReference Include="..\Entity\LibraryManagementSystem.Entity.csproj" />
   </ItemGroup>
 

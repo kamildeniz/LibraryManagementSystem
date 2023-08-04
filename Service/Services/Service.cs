@@ -2,11 +2,6 @@
 using LibraryManagementSystem.Core.Services;
 using LibraryManagementSystem.Core.UnitOfWorks;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace LibraryManagementSystem.Service.Services
 {
@@ -48,17 +43,17 @@ namespace LibraryManagementSystem.Service.Services
             await _unitOfWork.CommitAsync();
         }
 
-        public  async Task<IEnumerable<T>> GetAllAsync()
+        public async Task<IEnumerable<T>> GetAllAsync()
         {
-           return await  _repository.GetAll().ToListAsync();
-           
-            
+            return await _repository.GetAll().ToListAsync();
+
+
         }
 
         public async Task<T> GetByIdAsync(int id)
         {
             var hasProduct = await _repository.GetByIdAsync(id);
-            
+
             return hasProduct;
         }
 
