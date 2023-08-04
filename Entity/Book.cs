@@ -1,6 +1,6 @@
 ﻿using Entity;
 
-namespace ClassLibrary1
+namespace LibraryManagementSystem.Entity
 {
     public class Book : BaseEntity
     {
@@ -9,5 +9,6 @@ namespace ClassLibrary1
         public string? Description { get; set; }
         public int CategoryId { get; set; }
         public int AuthorId { get; set; }
+        public byte[]? CoverPhoto { get; set; }
     }
 }

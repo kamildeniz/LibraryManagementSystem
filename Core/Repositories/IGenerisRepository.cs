@@ -3,7 +3,7 @@
     public interface IGenerisRepository<T> where T : class
     {
         IQueryable<T> GetAll();
-        Task<T> GetByIdAsync();
+        Task<T> GetByIdAsync(int id);
         Task AddAsync(T entity);
         Task AddRange(IEnumerable<T> entities);
         void Update(T entity);
