@@ -1,4 +1,5 @@
-﻿using Entity;
+﻿
+using Entity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
@@ -13,7 +14,7 @@ namespace LibraryManagementSystem.Repository.Configurations
             builder.Property(x => x.Password).IsRequired().HasMaxLength(25);
             builder.Property(x => x.RoleId).IsRequired();
             builder.Property(x => x.ProfilePhotoPath).IsRequired().HasMaxLength(150);
-
+            builder.HasOne(x => x.Role).WithMany(x=>x.Users).HasForeignKey(x => x.RoleId);
 
         }
     }

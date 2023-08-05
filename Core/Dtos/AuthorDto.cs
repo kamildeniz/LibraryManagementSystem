@@ -2,6 +2,7 @@
 {
     public class AuthorDto : BaseDto
     {
+        public string? Name { get; set; }
         public string? SurName { get; set; }
     }
 }
