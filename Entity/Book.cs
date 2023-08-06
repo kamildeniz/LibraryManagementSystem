@@ -12,5 +12,6 @@ namespace LibraryManagementSystem.Entity
         public byte[]? CoverPhoto { get; set; }
         public Category Category { get; set; }
         public Author Author { get; set; }
+        public ICollection<BorrowedBook> BorrowedBooks { get; set; }
     }
 }

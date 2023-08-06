@@ -9,5 +9,6 @@ namespace Entity
         public int RoleId { get; set; }
         public string? ProfilePhotoPath { get; set; }
         public Role Role { get; set; }
+        public ICollection<BorrowedBook> BorrowedBooks { get; set; }
     }
 }

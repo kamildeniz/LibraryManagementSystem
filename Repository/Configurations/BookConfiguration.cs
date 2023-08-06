@@ -14,6 +14,9 @@ namespace LibraryManagementSystem.Repository.Configurations
             builder.Property(x => x.AuthorId).IsRequired();
             builder.Property(x => x.CategoryId).IsRequired();
             builder.Property(x => x.Description).IsRequired().HasMaxLength(500);
+            builder.HasOne(x => x.Category).WithMany(x => x.Books).HasForeignKey(x => x.CategoryId);
+            builder.HasOne(x => x.Author).WithMany(x => x.Books).HasForeignKey(x => x.AuthorId);
+
         }
     }
 }

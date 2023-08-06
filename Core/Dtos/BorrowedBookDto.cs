@@ -1,4 +1,5 @@
-﻿using LibraryManagementSystem.Core.Dtos;
+﻿using Entity;
+using LibraryManagementSystem.Core.Dtos;
 
 namespace LibraryManagementSystem.Entity
 {
@@ -10,5 +11,7 @@ namespace LibraryManagementSystem.Entity
         public DateTime BorrowedDate { get; set; }
         public DateTime Deadline { get; set; }
         public bool GivingBack { get; set; }
+
+
     }
 }
