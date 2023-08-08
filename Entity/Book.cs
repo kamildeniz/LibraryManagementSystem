@@ -9,7 +9,7 @@ namespace LibraryManagementSystem.Entity
         public string? Description { get; set; }
         public int CategoryId { get; set; }
         public int AuthorId { get; set; }
-        public byte[]? CoverPhoto { get; set; }
+        public string? PhotoPath { get; set; }
         public Category Category { get; set; }
         public Author Author { get; set; }
         public ICollection<BorrowedBook> BorrowedBooks { get; set; }

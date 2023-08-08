@@ -1,14 +1,9 @@
 ﻿using FluentValidation;
 using LibraryManagementSystem.Entity;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace LibraryManagementSystem.Service.Validations
 {
-    public class BorrowedBookDtoValidator:AbstractValidator<BorrowedBookDto>
+    public class BorrowedBookDtoValidator : AbstractValidator<BorrowedBookDto>
     {
         public BorrowedBookDtoValidator()
         {

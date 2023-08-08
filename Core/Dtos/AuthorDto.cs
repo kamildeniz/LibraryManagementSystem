@@ -6,7 +6,7 @@ namespace LibraryManagementSystem.Core.Dtos
     {
         public string? Name { get; set; }
         public string? SurName { get; set; }
-        public ICollection<Book> Books { get; set; }
+     
 
     }
 }

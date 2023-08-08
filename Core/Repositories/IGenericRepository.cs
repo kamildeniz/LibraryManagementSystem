@@ -1,6 +1,6 @@
 ﻿namespace LibraryManagementSystem.Core.Repositories
 {
-    public interface IGenerisRepository<T> where T : class
+    public interface IGenericRepository<T> where T : class
     {
         IQueryable<T> GetAll();
         Task<T> GetByIdAsync(int id);

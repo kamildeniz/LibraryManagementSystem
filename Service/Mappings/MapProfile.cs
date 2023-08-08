@@ -15,6 +15,8 @@ namespace LibraryManagementSystem.Service.Mappings
             CreateMap<RoleDto, Role>().ReverseMap();
             CreateMap<CategoryDto, Category>().ReverseMap();
             CreateMap<BorrowedBookDto, BorrowedBook>().ReverseMap();
+            CreateMap<Book, BookByCategoryDto>();
+            CreateMap<Book, BookByAuthorDto>();
         }
     }
 }

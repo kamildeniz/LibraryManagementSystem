@@ -1,5 +1,4 @@
-﻿using Entity;
-using LibraryManagementSystem.Core.Dtos;
+﻿using LibraryManagementSystem.Core.Dtos;
 
 namespace LibraryManagementSystem.Entity
 {

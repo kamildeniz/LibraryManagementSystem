@@ -7,11 +7,11 @@ namespace LibraryManagementSystem.Service.Services
 {
     public class Service<T> : IService<T> where T : class
     {
-        private readonly IGenerisRepository<T> _repository;
+        private readonly IGenericRepository<T> _repository;
 
         private readonly IUnitOfWork _unitOfWork;
 
-        public Service(IUnitOfWork unitOfWork, IGenerisRepository<T> repository)
+        public Service(IUnitOfWork unitOfWork, IGenericRepository<T> repository)
         {
             _unitOfWork = unitOfWork;
             _repository = repository;

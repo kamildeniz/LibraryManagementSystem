@@ -1,42 +1,50 @@
 ﻿using LibraryManagementSystem.Core.Repositories;
+using Microsoft.EntityFrameworkCore;
 
 namespace LibraryManagementSystem.Repository.Repositories
 {
-    public class GenericRepository<T> : IGenerisRepository<T> where T : class
+    public class GenericRepository<T> : IGenericRepository<T> where T : class
     {
-        public Task AddAsync(T entity)
+        protected readonly AppDbContext _context;
+        private readonly DbSet<T> _dbSet;
+        public GenericRepository(AppDbContext context)
         {
-            throw new NotImplementedException();
+            _context = context;
+            _dbSet = context.Set<T>();
+        }
+        public async Task AddAsync(T entity)
+        {
+            await _dbSet.AddAsync(entity);
         }
 
-        public Task AddRange(IEnumerable<T> entities)
+        public async Task AddRange(IEnumerable<T> entities)
         {
-            throw new NotImplementedException();
+            await _dbSet.AddRangeAsync(entities);
         }
 
         public void Delete(T entity)
         {
-            throw new NotImplementedException();
+            _dbSet.Remove(entity);
         }
 
         public void DeleteRange(IEnumerable<T> entities)
         {
-            throw new NotImplementedException();
+            _dbSet.RemoveRange(entities);
         }
 
         public IQueryable<T> GetAll()
         {
-            throw new NotImplementedException();
+            return _dbSet.AsNoTracking().AsQueryable();
         }
 
-        public Task<T> GetByIdAsync(int id)
+        public async Task<T> GetByIdAsync(int id)
         {
-            throw new NotImplementedException();
+            return await _dbSet.FindAsync(id);
         }
 
         public void Update(T entity)
         {
-            throw new NotImplementedException();
+            _dbSet.Update(entity);
         }
     }
 }

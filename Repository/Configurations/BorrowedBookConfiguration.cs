@@ -22,3 +22,4 @@ namespace LibraryManagementSystem.Repository.Configurations
                    .OnDelete(DeleteBehavior.Restrict);
         }
     }
+}

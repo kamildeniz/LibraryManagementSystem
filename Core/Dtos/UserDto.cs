@@ -1,6 +1,4 @@
-﻿using LibraryManagementSystem.Entity;
-
-namespace LibraryManagementSystem.Core.Dtos
+﻿namespace LibraryManagementSystem.Core.Dtos
 {
     public class UserDto : BaseDto
     {

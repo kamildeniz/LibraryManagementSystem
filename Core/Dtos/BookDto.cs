@@ -1,7 +1,4 @@
-﻿using Entity;
-using LibraryManagementSystem.Entity;
-
-namespace LibraryManagementSystem.Core.Dtos
+﻿namespace LibraryManagementSystem.Core.Dtos
 {
     public class BookDto : BaseDto
     {
@@ -10,7 +7,7 @@ namespace LibraryManagementSystem.Core.Dtos
         public string? Description { get; set; }
         public int CategoryId { get; set; }
         public int AuthorId { get; set; }
-        public byte[]? CoverPhoto { get; set; }
+        public string? PhotoPath { get; set; }
 
     }
 }
