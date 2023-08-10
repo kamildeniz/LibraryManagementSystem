@@ -1,6 +1,6 @@
 ﻿using LibraryManagementSystem.Core.Dtos;
 
-namespace LibraryManagementSystem.Entity
+namespace LibraryManagementSystem.Core.Dtos
 {
     public class BorrowedBookDto : BaseDto
     {

@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace LibraryManagementSystem.Repository.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20230807215222_initialTable")]
-    partial class initialTable
+    [Migration("20230808131546_initialEditTable")]
+    partial class initialEditTable
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -121,9 +121,6 @@ namespace LibraryManagementSystem.Repository.Migrations
                     b.Property<int>("CategoryId")
                         .HasColumnType("int");
 
-                    b.Property<byte[]>("CoverPhoto")
-                        .HasColumnType("varbinary(max)");
-
                     b.Property<string>("Description")
                         .IsRequired()
                         .HasMaxLength(500)
@@ -133,6 +130,9 @@ namespace LibraryManagementSystem.Repository.Migrations
                         .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("PhotoPath")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("Stock")
                         .HasColumnType("int");
@@ -186,7 +186,7 @@ namespace LibraryManagementSystem.Repository.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("BorrowedBook");
+                    b.ToTable("BorrowedBooks");
                 });
 
             modelBuilder.Entity("LibraryManagementSystem.Entity.Category", b =>

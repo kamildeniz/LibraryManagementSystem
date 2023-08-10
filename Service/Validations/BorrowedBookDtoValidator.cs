@@ -1,5 +1,5 @@
 ﻿using FluentValidation;
-using LibraryManagementSystem.Entity;
+using LibraryManagementSystem.Core.Dtos;
 
 namespace LibraryManagementSystem.Service.Validations
 {

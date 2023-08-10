@@ -183,7 +183,7 @@ namespace LibraryManagementSystem.Repository.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("BorrowedBook");
+                    b.ToTable("BorrowedBooks");
                 });
 
             modelBuilder.Entity("LibraryManagementSystem.Entity.Category", b =>
